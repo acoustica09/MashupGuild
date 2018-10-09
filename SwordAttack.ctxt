@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=SwordAttack
+comment0.text=\r\n\ The\ weapon's\ path\r\n\ \r\n\ @author\ Chandler\ Clarke\ \r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=SwordAttack()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ swordLocator()
+comment4.params=
+comment4.target=void\ swordPath()
+comment5.params=
+comment5.target=void\ monsterKiller()
+numComments=6

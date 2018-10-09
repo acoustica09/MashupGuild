@@ -1,0 +1,49 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * A rotatable weapon
+ * 
+ * @Chandler Clarke 
+ * @Version 1.0
+ */
+public class Sword extends Player
+{
+    /**  The sword
+     * 
+     */
+    //Variables
+    public int playerX;
+    public int playerY;
+    //Methods
+    public void act() 
+    {
+        playerLocator();
+        orientation();
+        
+    }
+    //Makes sword follow cursor
+    public void orientation(){
+        //From Greenfoot user "danpost".  Turns the sword towards the mouse.
+        if (Greenfoot.mouseMoved(null) || Greenfoot.mouseDragged(null)){
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            if (mouse != null)
+            {
+                turnTowards(mouse.getX(), mouse.getY());
+            }
+        }
+    }
+    //Finds player location
+    public void playerLocator(){
+        int playerX = ((Player) getWorld().getObjects(Player.class).get(0)).getX()+10;
+        int playerY = ((Player) getWorld().getObjects(Player.class).get(0)).getY()+2;
+        setLocation(playerX, playerY);
+    }
+    //Generates a Sword Attack
+    public void attack(){
+        if (Greenfoot.mouseClicked (null)){
+            SwordAttack SwordAttack = new SwordAttack();
+            getWorld().addObject(SwordAttack, getX(), getY());
+        }
+    }
+}
+

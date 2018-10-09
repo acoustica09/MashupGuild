@@ -1,18 +1,16 @@
 #BlueJ class context
-comment0.target=Player
+comment0.target=PlayerChandler
 comment0.text=\r\n\ The\ main\ player\ class.\r\n\ \r\n\ @Chandler\ Clarke\ \r\n\ @Version\ 1.0\r\n
 comment1.params=
-comment1.target=Player()
+comment1.target=PlayerChandler()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ movementControls()
 comment4.params=
-comment4.target=void\ collisionDetector()
+comment4.target=boolean\ itemCollector()
 comment5.params=
-comment5.target=boolean\ itemCollector()
-comment6.params=
-comment6.target=void\ weaponDropper()
-comment7.params=delay
-comment7.target=boolean\ counter(int)
-numComments=8
+comment5.target=void\ weaponDropper()
+comment6.params=delay
+comment6.target=boolean\ counter(int)
+numComments=7

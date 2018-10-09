@@ -13,13 +13,7 @@ public class Player extends Actor
     public int playerX;
     public int playerY;
     public boolean hasSword = false;
-    public int score;
-    public int counter;
 
-    //Constructor
-    public Player(){
-        counter = 0;
-    }
     //The main method
     public void act(){
         //Methods
@@ -71,7 +65,7 @@ public class Player extends Actor
     public void collisionDetector(){
         //1x1 Barriers
         if (!getIntersectingObjects(RightBarrier.class).isEmpty()) move(-4);
-        if (!getIntersectingObjects(LeftBarrier.class).isEmpty()) move(4);
+        if (!getIntersectingObjects(LeftBarrier.class).isEmpty()) move(1);
         if (!getIntersectingObjects(BottomBarrier.class).isEmpty()){ 
             setRotation(270);
             move(4);
@@ -105,25 +99,6 @@ public class Player extends Actor
             getWorld().addObject(Sword, getX(), getY());
         }
         return hasSword;
-    }
-
-    private void weaponDropper(){
-        if (Greenfoot.isKeyDown("f")){
-            removeTouching(Sword.class);
-            SwordItem s = new SwordItem();
-            getWorld().addObject(s, getX(), getY());
-        }
-    }
-
-    public boolean counter(int delay){
-        counter++;
-        if (counter > 1000)
-            counter = 500;
-        if (counter > delay){
-            counter = 0;
-            return true;
-        }
-        return false;
     }
 }
 
