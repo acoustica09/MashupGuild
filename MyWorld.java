@@ -20,7 +20,7 @@ public class MyWorld extends greenfoot.World
     }
     private void prepare(){
         addObject( new PlayerChandler(), 200, 200);
-        addObject( new Sword(), 200, 200);
+        addObject( new SwordItem(), 100, 200);
     }
     public void addScore(int points){
         score = points + score;
